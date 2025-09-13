@@ -1,0 +1,48 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+app/.venv/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+README.md
+*.md
+
+# Logs
+*.log
+
+# Development and data files (exclude from container)
+data/
+*.csv
+notebook/
+*.ipynb
+document/
+export_model.py
+
+# Docker files in subdirectories
+app/Dockerfile
+app/docker-compose.yml
+app/.dockerignore
+app/pyproject.toml
+app/.python-version
+app/uv.lock

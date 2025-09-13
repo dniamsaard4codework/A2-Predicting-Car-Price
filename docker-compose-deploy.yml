@@ -1,0 +1,20 @@
+services:
+  web:
+    image: dniamsaard4codework/st126235_car_price_app:a2.0
+    restart: always
+    environment:
+      - HOST=0.0.0.0
+      - PORT=80
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.services.web-st126235.loadbalancer.server.port=80"
+      - "traefik.http.routers.web-st126235.rule=Host(`st126235.ml.brain.cs.ait.ac.th`)"
+      - "traefik.http.routers.web-st126235.tls=true"
+      - "traefik.http.routers.web-st126235.tls.certresolver=production"
+      - "traefik.http.routers.web-st126235.entrypoints=websecure"
+    networks:
+      - traefik_default
+
+networks:
+  traefik_default:
+    external: true

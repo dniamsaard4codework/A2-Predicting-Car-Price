@@ -1,0 +1,42 @@
+[project]
+name = "car-price-predictor"
+version = "1.0.0"
+description = "A web application for predicting used car prices using machine learning"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dash==2.16.1",
+    "pandas==2.0.3",
+    "numpy==1.26.4",
+    "scikit-learn==1.7.1",
+    "xgboost==2.0.3",
+    "joblib==1.4.2",
+    "gunicorn==21.2.0",
+    "matplotlib==3.10.5",
+    "seaborn>=0.12.0",
+    "jupyter>=1.0.0",
+    "jupyterlab>=4.0.0",
+    "ipykernel>=6.0.0",
+    "ipywidgets>=8.0.0",
+    "notebook>=7.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
