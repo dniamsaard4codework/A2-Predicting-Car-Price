@@ -209,3 +209,5 @@ __marimo__/
 # Not add mlflow artifacts and model files
 mlartifacts/
 mlruns/
+notebook/mlartifacts/
+notebook/mlruns/

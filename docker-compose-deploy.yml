@@ -4,10 +4,10 @@ services:
     restart: always
     environment:
       - HOST=0.0.0.0
-      - PORT=80
+      - PORT=8050
     labels:
       - "traefik.enable=true"
-      - "traefik.http.services.web-st126235.loadbalancer.server.port=80"
+      - "traefik.http.services.web-st126235.loadbalancer.server.port=8050"
       - "traefik.http.routers.web-st126235.rule=Host(`st126235.ml.brain.cs.ait.ac.th`)"
       - "traefik.http.routers.web-st126235.tls=true"
       - "traefik.http.routers.web-st126235.tls.certresolver=production"
